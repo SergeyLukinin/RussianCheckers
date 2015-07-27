@@ -1,0 +1,157 @@
+html,
+body {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+main {
+    width: 1200px;
+    height: 700px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.game_area {
+    
+    float: left;
+}
+
+.checkers_board {
+    margin: 0 auto;
+    width: 800px;
+    background-color:#fcfceb;
+    height: 700px;
+    position: relative;
+}
+
+.checkers_board th,
+.checkers_board td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkers_board tbody td:not(.board_symbol) {
+    width: 80px;
+    height: 70px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.4);
+}
+
+.checkers_board tbody td.board_symbol {
+    width: 20px;
+
+}
+.checkers_board tbody td.board_symbol,
+.checkers_board th,
+.checkers_board tfoot td {
+    background-color: #6F604E;   
+    color: #fff;
+}
+
+.checkers_board th,
+.checkers_board tfoot td {
+    height: 25px;
+}
+
+.checkers_board tbody tr:nth-child(even) > td:nth-child(even):not(.board_symbol) {
+    background-color: #A5978C;
+    
+}
+
+.checkers_board tbody tr:nth-child(odd) > td:nth-child(odd):not(.board_symbol) {
+    background-color: #A5978C;
+}
+
+.checker,
+.checkers_board tbody td.active .checker:hover {
+    z-index: 1;
+    position: relative;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    cursor: pointer;
+    box-shadow:inset rgba(0,0,0,.6) 0 -3px 8px,
+               inset rgba(252,255,255,.7) 0 13px 8px,
+               rgba(0,0,0,.8) 0 3px 8px -3px;
+    transition: .5s;
+    
+    top: 0;
+    left: 0;
+}
+
+
+.checker.white {    
+    background: rgb(220, 220, 220) radial-gradient(circle at 50% 0, rgba(255, 255, 255, .65), rgba(255, 255, 255, .35));
+}
+
+.checker.black {
+    background: rgb(111, 96, 78) radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+}
+
+.checker.king:before {
+    content: '♛';
+    position: absolute;
+    color: #b9b900;
+    top: 15px;
+    left: 20px;
+    z-index: 21;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow:
+        0px 1px 0px #c0c0c0,
+        0px 2px 0px #b0b0b0,
+        0px 3px 0px #a0a0a0,
+        0px 4px 0px #909090,
+        0px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.checker:hover {
+    box-shadow:inset rgba(0,0,0,.6) 0 -3px 8px,
+               inset rgba(252,255,255,.7) 0 13px 8px,
+               rgba(0,0,0,.8) 0 3px 8px -3px,
+               #FFFF91 0 0px 30px;
+}
+
+.checkers_board tbody td.perspective {
+    box-shadow: inset 0px 0px 40px #80ff00;
+    cursor:pointer;
+}
+
+.checkers_board tbody td.active {
+    box-shadow: inset 0px 0px 60px #FFFF91;
+}
+
+.information {
+    float: left;
+    margin-left: 30px;
+    width: 370px;
+    height: 700px;
+    overflow-y: auto;
+}
+
+.information h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.information h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+.information p {
+    margin-top: 10px;
+}
+
+.information img {
+    width: 100%;
+    text-align: center;
+    margin: 5px auto;
+}
